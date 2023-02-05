@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "shortDescription": {
+      "pluginOptions": {},
+      "type": "richtext"
+    },
+    "longDescription": {
+      "pluginOptions": {},
+      "type": "richtext"
+    },
+    "price": {
+      "pluginOptions": {},
+      "type": "decimal"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {}
+    },
+    "category": {
+      "pluginOptions": {},
+      "type": "enumeration",
+      "enum": [
+        "sofa",
+        "table",
+        "light",
+        "chair",
+        "bed"
+      ]
+    }
+  }
+}
