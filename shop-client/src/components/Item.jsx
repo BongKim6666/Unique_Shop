@@ -39,7 +39,8 @@ const Item = ({ item, width }) => {
           alt={item.name}
           width="250px"
           height="170px"
-          src={`http://localhost:1337${url}`}
+          // src={url}
+          src={url}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />

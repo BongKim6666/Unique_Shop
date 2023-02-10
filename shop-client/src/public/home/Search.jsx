@@ -15,7 +15,7 @@ const SearchBar = () => {
 
   async function getItems() {
     const items = await fetch(
-      "http://localhost:1337/api/items?populate=image",
+      "https://unique-shop-server.herokuapp.com/api/items?populate=image",
       { method: "GET" }
     );
 

@@ -18,7 +18,7 @@ const ItemDetails = () => {
   const cartList = useSelector((state) => state.cart);
   const wishList = useSelector((state) => state.wish);
   const { itemId } = useParams();
-  const [value, setValue] = useState("description");
+  const [value, setValue] = useState("shortDescription");
   const [count, setCount] = useState(1);
   const [item, setItem] = useState(null);
   const [items, setItems] = useState([]);
@@ -38,7 +38,7 @@ const ItemDetails = () => {
 
   async function getItem() {
     const item = await fetch(
-      `http://localhost:1337/api/items/${itemId}?populate=image`,
+      `https://unique-shop-server.herokuapp.com/api/items/${itemId}?populate=image`,
       {
         method: "GET",
       }
@@ -49,7 +49,7 @@ const ItemDetails = () => {
 
   async function getItems() {
     const items = await fetch(
-      `http://localhost:1337/api/items?populate=image`,
+      `https://unique-shop-server.herokuapp.com/api/items?populate=image`,
       {
         method: "GET",
       }
@@ -72,7 +72,9 @@ const ItemDetails = () => {
             alt={item?.name}
             width="100%"
             height="100%"
-            src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            src={
+              item?.attributes?.image?.data?.attributes?.formats?.medium?.url
+            }
             style={{ objectFit: "contain" }}
           />
         </Box>
