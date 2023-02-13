@@ -3,12 +3,12 @@ EC site
 
 製品情報はバックグラウンドでサーバーに保存されているため、Web ページを開く前に、Web サイト サーバーのAdmin Panelを開く必要があります。
 
-以下はServerのログイン　IDとパスワードです。
 
 
 サイトアドレス:https://unique-shop.vercel.app/
 Server アドレス: https://unique-shop-server.herokuapp.com/admin
 
+以下はServerのログイン　IDとパスワードです。
 
 ID:bongkim8090@gmail.com
 PW:Test123456
