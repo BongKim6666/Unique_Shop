@@ -49,7 +49,6 @@ const CartMenu = () => {
         backgroundColor="white"
       >
         <Box padding="30px" overflow="auto" height="100%">
-          {/* HEADER */}
           <FlexBox mb="15px">
             <Typography variant="h3">カート ({cart.length})</Typography>
             <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
@@ -57,7 +56,6 @@ const CartMenu = () => {
             </IconButton>
           </FlexBox>
 
-          {/* CART LIST */}
           <Box>
             {cart.map((item) => (
               <Box key={`${item.attributes.name}-${item.id}`}>
@@ -120,7 +118,6 @@ const CartMenu = () => {
             ))}
           </Box>
 
-          {/* ACTIONS */}
           <Box m="20px 0">
             <FlexBox m="20px 0">
               <Typography fontWeight="bold">金額</Typography>

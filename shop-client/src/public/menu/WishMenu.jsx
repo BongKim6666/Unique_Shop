@@ -37,7 +37,6 @@ const WishMenu = () => {
         backgroundColor="white"
       >
         <Box padding="30px" overflow="auto" height="100%">
-          {/* HEADER */}
           <FlexBox mb="15px">
             <Typography variant="h3">気に入り ({wish.length})</Typography>
             <IconButton onClick={() => dispatch(setIsWishOpen({}))}>
@@ -45,7 +44,6 @@ const WishMenu = () => {
             </IconButton>
           </FlexBox>
 
-          {/* Wish LIST */}
           <Box>
             {wish.map((item) => (
               <Box key={`${item.attributes.name}-${item.id}`}>
@@ -82,7 +80,6 @@ const WishMenu = () => {
             ))}
           </Box>
 
-          {/* ACTIONS */}
           <Box m="20px 0">
             <FlexBox m="20px 0">
               <Typography fontWeight="bold">商品数 :</Typography>

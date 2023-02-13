@@ -66,14 +66,15 @@ const ShoppingList = () => {
           "& .MuiTabs-flexContainer": {
             flexWrap: "wrap",
           },
+          fontSize: "20px",
         }}
       >
-        <Tab label="All" value="all" />
-        <Tab label="ソファ" value="sofa" />
-        <Tab label="テーブル" value="table" />
-        <Tab label="椅子" value="chair" />
-        <Tab label="ライト" value="light" />
-        <Tab label="ベッド" value="bed" />
+        <Tab label="All " sx={{ fontSize: "18px" }} value="all" />
+        <Tab label="ソファ" sx={{ fontSize: "18px" }} value="sofa" />
+        <Tab label="テーブル" sx={{ fontSize: "18px" }} value="table" />
+        <Tab label="椅子" sx={{ fontSize: "18px" }} value="chair" />
+        <Tab label="ライト" sx={{ fontSize: "18px" }} value="light" />
+        <Tab label="ベッド" sx={{ fontSize: "18px" }} value="bed" />
       </Tabs>
       <Box
         sx={{

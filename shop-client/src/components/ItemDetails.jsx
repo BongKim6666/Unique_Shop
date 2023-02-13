@@ -66,7 +66,6 @@ const ItemDetails = () => {
   return (
     <Box width="80%" m="80px auto">
       <Box display="flex" flexWrap="wrap" columnGap="40px">
-        {/* IMAGES */}
         <Box flex="1 1 40%" mb="40px">
           <img
             alt={item?.name}
@@ -79,7 +78,6 @@ const ItemDetails = () => {
           />
         </Box>
 
-        {/* ACTIONS */}
         <Box flex="1 1 50%" mb="40px">
           <Box display="flex" justifyContent="space-between">
             <Box>商品</Box>
@@ -163,7 +161,6 @@ const ItemDetails = () => {
         </Box>
       </Box>
 
-      {/* INFORMATION */}
       <Box m="20px 0">
         <Tabs value={value} onChange={handleChange}>
           <Tab label="概要" value="shortDescription" />
@@ -179,7 +176,6 @@ const ItemDetails = () => {
         )}
       </Box>
 
-      {/* RELATED ITEMS */}
       <Box mt="50px" width="100%">
         <Typography variant="h3" fontWeight="bold">
           関連商品

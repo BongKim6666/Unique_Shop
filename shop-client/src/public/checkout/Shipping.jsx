@@ -11,7 +11,6 @@ const Shipping = ({
 }) => {
   return (
     <Box m="30px auto">
-      {/* BILLING FORM */}
       <Box>
         <Typography sx={{ mb: "15px" }} fontSize="18px">
           支払い情報
@@ -44,7 +43,6 @@ const Shipping = ({
         />
       </Box>
 
-      {/* SHIPPING FORM */}
       {!values.shippingAddress.isSameAddress && (
         <Box>
           <Typography sx={{ mb: "15px" }} fontSize="18px">

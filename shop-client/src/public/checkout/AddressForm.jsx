@@ -13,7 +13,6 @@ const AddressForm = ({
 }) => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
-  // these functions allow for better code readability
   const formattedName = (field) => `${type}.${field}`;
 
   const formattedError = (field) =>

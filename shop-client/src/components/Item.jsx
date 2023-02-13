@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import { IconButton, Box, Typography, useTheme, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
@@ -15,6 +16,14 @@ const Item = ({ item, width }) => {
   const {
     palette: { neutral },
   } = useTheme();
+
+  const cartList = useSelector((state) => state.cart);
+  const { itemId } = useParams();
+
+  const isCartHover = cartList.cart.filter(
+    (cartItem) => cartItem.id === Number(itemId)
+  );
+  console.log(isCartHover.length);
 
   const { category, price, name, image } = item.attributes;
   const {
@@ -39,7 +48,6 @@ const Item = ({ item, width }) => {
           alt={item.name}
           width="250px"
           height="170px"
-          // src={url}
           src={url}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
@@ -67,14 +75,22 @@ const Item = ({ item, width }) => {
                 <AddIcon />
               </IconButton>
             </Box>
-            <Button
-              onClick={() => {
-                dispatch(addToCart({ item: { ...item, count } }));
-              }}
-              sx={{ backgroundColor: shades.primary[300], color: "white" }}
-            >
-              カートに入れる
-            </Button>
+            {isHovered && isCartHover.length === 0 ? (
+              <Button
+                onClick={() => {
+                  dispatch(addToCart({ item: { ...item, count } }));
+                }}
+                sx={{ backgroundColor: shades.primary[300], color: "white" }}
+              >
+                カートに入れる
+              </Button>
+            ) : (
+              <Button
+                sx={{ backgroundColor: shades.primary[300], color: "white" }}
+              >
+                カートに入れる
+              </Button>
+            )}
           </Box>
         </Box>
       </Box>

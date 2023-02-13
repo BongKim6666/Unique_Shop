@@ -21,7 +21,6 @@ const Checkout = () => {
   const handleFormSubmit = async (values, actions) => {
     setActiveStep(activeStep + 1);
 
-    // this copies the billing address onto shipping address
     if (isFirstStep && values.shippingAddress.isSameAddress) {
       actions.setFieldValue("shippingAddress", {
         ...values.billingAddress,
@@ -55,7 +54,13 @@ const Checkout = () => {
         body: JSON.stringify(requestBody),
       }
     );
+
+    console.log(response);
+
     const session = await response.json();
+
+    console.log(session);
+
     await stripe.redirectToCheckout({
       sessionId: session.id,
     });
