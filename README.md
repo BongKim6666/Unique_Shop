@@ -5,7 +5,11 @@ EC site
 
 以下はServerのログイン　IDとパスワードです。
 
+
+サイトアドレス:https://unique-shop.vercel.app/
 Server アドレス: https://unique-shop-server.herokuapp.com/admin
+
+
 ID:bongkim8090@gmail.com
 PW:Test123456
 
