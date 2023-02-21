@@ -9,6 +9,7 @@ import wishReducer from "./state/addWishList";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { theme } from "./style";
+import { Analytics } from "@vercel/analytics/react";
 
 const store = configureStore({
   reducer: {
@@ -24,6 +25,7 @@ root.render(
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <App />
+        <Analytics />
       </ThemeProvider>
     </Provider>
   </React.StrictMode>
